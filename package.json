@@ -4,7 +4,7 @@
   "scripts": {
     "start": "node index.js",
     "tailbuild": "tailwindcss -i input.css -o ./views/static/dist.css --watch",
-    "jest": "jest",
+    "test": "jest",
     "build": "webpack index.js -o dist/bundle.js",
     "dev": "nodemon index.js"
   },
