@@ -1,5 +1,4 @@
-
-const { dayOfTheWeek } = require('./index');
+import { dayOfTheWeek } from "./app";
 
 
 test('getDay returns the long-format day of the week', () => {

@@ -1,12 +1,12 @@
 {
-  "name": "simpleapptodeploy",
-  "version": "1.0.1",
+  "name": "my-webpack-project",
+  "version": "1.0.0",
+  "type": "module",
   "scripts": {
-    "start": "node index.js",
+    "start": "node src/index.js",
     "tailbuild": "tailwindcss -i input.css -o ./views/static/dist.css --watch",
-    "jest": "jest",
-    "build": "webpack index.js -o dist/bundle.js",
-    "dev": "nodemon index.js"
+    "test": "jest",
+    "dev": "nodemon src/index.js"
   },
   "main": "index.js",
   "license": "MIT",
@@ -16,10 +16,13 @@
     "express-ws": "^5.0.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.21.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.21.2",
+    "@babel/preset-env": "^7.20.2",
+    "babel-loader": "^9.1.2",
     "jest": "^29.4.3",
     "nodemon": "^2.0.21",
-    "tailwindcss": "^3.2.7",
-    "webpack": "^5.75.0",
-    "webpack-cli": "^5.0.1"
-  }
+    "tailwindcss": "^3.2.7"
+  },
+  "description": "My webpack project"
 }
