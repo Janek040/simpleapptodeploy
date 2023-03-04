@@ -2,11 +2,21 @@ const app = require('express')()
 const express = require('express')
 require('express-ws')(app)
 
+
+const dayOfTheWeek = (date = new Date()) => {
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+    return days[date.getDay()];
+}
+
+
+
 const port = process.env.PORT || 8080
 app.use(express.static('views'))
 app.set('view engine', 'ejs')
 app.get("/", (req, res) => {
-    res.render('index')
+    const day = dayOfTheWeek()
+    res.render('index', { day: day })
 })
 
 app.ws('/echo', (ws, req) => {
@@ -16,3 +26,4 @@ app.ws('/echo', (ws, req) => {
 })
 
 app.listen(port)
+module.exports.dayOfTheWeek = dayOfTheWeek;

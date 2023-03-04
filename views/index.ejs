@@ -5,15 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./dist.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./static/dist.css">
+    <title>My simple app</title>
 </head>
 
 <body>
-    <div class="p-6">
-        <h1 class="text-2xl">Hello World</h1>
-        <p class="text-xl">I'm now a template</p>
+    <div class="p-8 bg-red-600">
+        <h1 class="text-6xl font-bold text-center text-white">Hello World</h1>
     </div>
+    <h2 class="text-5xl text-green-400 p-6">What day is today?</h2>
+    <p class="text-xl p-8">Today is <span class="text-blue-700">
+            <%= day %>
+        </span>
+    </p>
 </body>
 
 </html>
