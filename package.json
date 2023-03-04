@@ -3,11 +3,11 @@
   "version": "1.0.1",
   "type": "module",
   "scripts": {
-    "start": "node index.mjs",
+    "start": "node index.js",
     "tailbuild": "tailwindcss -i input.css -o ./views/static/dist.css --watch",
     "test": "jest",
     "build": "webpack index.js -o dist/bundle.js",
-    "dev": "nodemon index.mjs"
+    "dev": "nodemon index.js"
   },
   "main": "index.js",
   "license": "MIT",
