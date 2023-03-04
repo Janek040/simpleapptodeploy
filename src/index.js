@@ -10,4 +10,6 @@ app.get("/", (req, res) => {
     res.render('index', { day: dayOfTheWeek() })
 })
 
-app.listen(port)
+app.listen(port, () => {
+    console.log("server is running")
+})
