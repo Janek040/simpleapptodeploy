@@ -1,10 +1,18 @@
 {
   "name": "simpleapptodeploy",
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "scripts": {
+    "start": "node index.js",
+    "tailbuild": "tailwindcss -i input.css -o ./views/static/dist.css --watch"
+  },
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "ejs": "^3.1.8",
     "express": "^4.18.2",
     "express-ws": "^5.0.2"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.2.7"
   }
 }

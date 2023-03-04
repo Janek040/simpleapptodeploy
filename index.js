@@ -1,8 +1,12 @@
 const app = require('express')()
+const express = require('express')
 require('express-ws')(app)
 
+const port = process.env.PORT || 8080
+app.use(express.static('views'))
+app.set('view engine', 'ejs')
 app.get("/", (req, res) => {
-    res.send("Hello World, I'm deployed")
+    res.render('index')
 })
 
 app.ws('/echo', (ws, req) => {
@@ -11,4 +15,4 @@ app.ws('/echo', (ws, req) => {
     })
 })
 
-app.listen(3000)
+app.listen(port)
